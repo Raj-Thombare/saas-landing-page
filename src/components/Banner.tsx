@@ -6,7 +6,7 @@ const Banner = () => {
       <div className='container'>
         <span className='font-medium'>
           <p className='hidden sm:inline'>
-            Introducing a completely redesigned interface -{" "}
+            Introducing a completely redesigned interface -
           </p>
           <a href='#' className='underline  underline-offset-4'>
             Explore the demo
