@@ -33,14 +33,14 @@ const Hero = () => {
               alt='cursor image'
               height={200}
               width={200}
-              className='absolute right-[476px] top-[108px] hidden sm:inline'
+              className='absolute right-[476px] top-[108px] hidden sm:inline select-none'
             />
             <Image
               src={MessageImage}
               alt='message image'
               height={200}
               width={200}
-              className='absolute top-[56px] left-[498px] hidden sm:inline'
+              className='absolute top-[56px] left-[498px] hidden sm:inline select-none'
             />
           </div>
         </div>
