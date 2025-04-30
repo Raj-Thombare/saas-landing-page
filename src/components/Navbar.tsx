@@ -7,7 +7,7 @@ import { div } from "framer-motion/client";
 const Navbar = () => {
   return (
     <div className='bg-black'>
-      <div className='px-4'>
+      <div className='container'>
         <div className='py-4 flex justify-between items-center'>
           <div className='relative'>
             <div className='w-full absolute top-2 bottom-0 bg-[linear-gradient(to_right,_#F87BFF,_#FB92CF,_#FFDD9B,_#C2F0B1,_#2FD8FE)] blur-md'></div>
