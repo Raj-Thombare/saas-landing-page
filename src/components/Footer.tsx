@@ -13,20 +13,26 @@ const Footer = () => {
             <a
               href='https://rajthombare.xyz'
               target='_blank'
-              className='hover:underline underline-offset-2 ml-2'>
+              className='hover:underline underline-offset-2 ml-2 hover:text-white'>
               Raj Thombare
             </a>
             , Inc. All rights reserved
           </div>
           <ul className='flex justify-center gap-2.5'>
-            <li>
-              <XIcon />
+            <li className='text-white/60 hover:text-white'>
+              <a href='https:/x.com/rajth0mbare' target='_blank'>
+                <XIcon />
+              </a>
             </li>
-            <li>
-              <InstaIcon />
+            <li className='text-white/60 hover:text-white'>
+              <a href='https:/instagram.com/rajth0mbare' target='_blank'>
+                <InstaIcon />
+              </a>
             </li>
-            <li>
-              <YoutubeIcon />
+            <li className='text-white/60 hover:text-white'>
+              <a href='#' target='_blank'>
+                <YoutubeIcon />
+              </a>
             </li>
           </ul>
         </div>

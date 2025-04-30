@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const CallToAction = () => {
   return (
-    <div className='text-white bg-black py-[72px] sm:py-24 text-center'>
-      <div className='container max-w-xl relative'>
+    <div className='text-white bg-black py-[72px] sm:py-24 text-center overflow-hidden'>
+      <div className='container max-w-xl relative mx-auto'>
         <Image
           src={helixImage}
           className='hidden sm:inline absolute top-6 left-[calc(100%+36px)] select-none'
@@ -14,7 +14,7 @@ const CallToAction = () => {
         />
         <Image
           src={emojiStarImage}
-          className='hidden sm:inline absolute -top-[120px] right-[calc(100%+24px)] select-none'
+          className='hidden sm:inline-flex absolute -top-[120px] right-[calc(100%+24px)] select-none'
           alt=''
         />
         <h2 className='text-center text-5xl sm:text-6xl font-bold tracking-tighter'>
