@@ -18,16 +18,19 @@ const images = [
 
 const LogoTicker = () => {
   return (
-    <div className='bg-black text-white py- py-[72px] sm:py-24'>
+    <div className='bg-black text-white py-[72px] sm:py-24'>
       <div className='container'>
         <h2 className='text-xl text-center text-white/70'>
           Trusted by the world&apos;s most innovative teams
         </h2>
-        <div className='overflow-hidden mt-9 before:content-[""] after:content-[""] before:absolute after:absolute relative before:w-4 after:w-4 before:h-full after:h-full before:right-0 after:left-0 before:top-0 after:top-0 before:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))]'>
-          <div className='flex gap-16 justify-center animate-marquee w-max'>
+        <div className='relative overflow-hidden mt-9'>
+          <div className='pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-black to-transparent z-10' />
+          <div className='pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-black to-transparent z-10' />
+
+          <div className='whitespace-nowrap flex animate-marquee'>
             {[...images, ...images].map(({ src, alt }, index) => (
               <Image
-                className='flex-none h-8 w-auto'
+                className='flex-none h-8 w-auto mx-8'
                 key={`${alt}-${index}`}
                 src={src}
                 alt={alt}

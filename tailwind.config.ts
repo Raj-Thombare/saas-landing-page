@@ -13,11 +13,11 @@ const config: Config = {
         center: true,
       },
       animation: {
-        marquee: 'marquee 20s linear infinite',
+        marquee: 'marquee 30s linear infinite',
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0)' },
+          '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
         },
       },
