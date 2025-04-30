@@ -31,11 +31,9 @@ const items = [
 const AccordionItem = ({
   question,
   answer,
-  key,
 }: {
   question: string;
   answer: string;
-  key: string;
 }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
