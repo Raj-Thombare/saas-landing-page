@@ -2,22 +2,23 @@ import React from "react";
 import GlobeIcon from "../assets/icons/globe.svg";
 import SecureIcon from "../assets/icons/secure.svg";
 import CheckIcon from "../assets/icons/check.svg";
+import Feature from "./Feature";
 
 const features = [
   {
-    Icon: <GlobeIcon className='w-8 h-8' />,
+    icon: <GlobeIcon className='w-8 h-8' />,
     title: "Integration Ecosystem",
     description:
       "Enhance your productivity by connecting with your tools, keeping your essentials in one place.",
   },
   {
-    Icon: <CheckIcon className='w-8 h-8' />,
+    icon: <CheckIcon className='w-8 h-8' />,
     title: "Goal Setting and Tracking",
     description:
       "Define and track your goals, breaking down objectives into achievable tasks to keep your targets in sight.",
   },
   {
-    Icon: <SecureIcon className='w-8 h-8' />,
+    icon: <SecureIcon className='w-8 h-8' />,
     title: "Secure Data Encryption",
     description:
       "With end-to-end encryption, your data is securely stored and protected from unauthorized access.",
@@ -40,17 +41,14 @@ const Features = () => {
         </div>
 
         <div className='mt-16 flex flex-col sm:flex-row sm:flex-1 gap-4'>
-          {features.map(({ title, description, Icon }) => {
+          {features.map(({ title, description, icon }) => {
             return (
-              <div
+              <Feature
+                title={title}
+                description={description}
+                icon={icon}
                 key={title}
-                className='border border-white/30 px-5 py-10 text-center rounded-lg sm:flex-1'>
-                <div className='inline-flex h-14 w-14 text-black bg-white justify-center items-center rounded-lg'>
-                  {Icon}
-                </div>
-                <h3 className='mt-6 font-bold'>{title}</h3>
-                <p className='mt-2 text-white/70'>{description}</p>
-              </div>
+              />
             );
           })}
         </div>
