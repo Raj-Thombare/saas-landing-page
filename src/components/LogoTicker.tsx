@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import acmeLogo from "../assets/images/acme.png";
 import quantumLogo from "../assets/images/quantum.png";
@@ -6,6 +8,7 @@ import celestialLogo from "../assets/images/celestial.png";
 import pulseLogo from "../assets/images/pulse.png";
 import apexLogo from "../assets/images/apex.png";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const images = [
   { src: acmeLogo, alt: "Acme Logo" },
@@ -26,17 +29,32 @@ const LogoTicker = () => {
         <div className='relative overflow-hidden mt-9'>
           <div className='pointer-events-none absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-black to-transparent z-10' />
           <div className='pointer-events-none absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-black to-transparent z-10' />
-
-          <div className='whitespace-nowrap flex animate-marquee'>
-            {[...images, ...images].map(({ src, alt }, index) => (
+          <motion.div
+            transition={{
+              duration: 10,
+              ease: "linear",
+              repeat: Infinity,
+            }}
+            initial={{ translateX: 0 }}
+            animate={{ translateX: "-50%" }}
+            className='flex gap-16 flex-none pr-16'>
+            {images.map(({ src, alt }, index) => (
               <Image
-                className='flex-none h-8 w-auto mx-8'
+                className='flex-none h-8 w-auto'
                 key={`${alt}-${index}`}
                 src={src}
                 alt={alt}
               />
             ))}
-          </div>
+            {images.map(({ src, alt }, index) => (
+              <Image
+                className='flex-none h-8 w-auto'
+                key={`${alt}-${index}`}
+                src={src}
+                alt={alt}
+              />
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>

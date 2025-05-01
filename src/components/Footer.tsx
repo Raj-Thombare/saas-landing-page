@@ -1,7 +1,7 @@
 import React from "react";
 import XIcon from "../assets/icons/x-social.svg";
 import InstaIcon from "../assets/icons/insta.svg";
-import YoutubeIcon from "../assets/icons/youtube.svg";
+import GithubIcon from "../assets/icons/github.svg";
 
 const Footer = () => {
   return (
@@ -20,6 +20,11 @@ const Footer = () => {
           </div>
           <ul className='flex justify-center gap-2.5'>
             <li className='text-white/60 hover:text-white'>
+              <a href='https:/github.com/raj-thombare' target='_blank'>
+                <GithubIcon />
+              </a>
+            </li>
+            <li className='text-white/60 hover:text-white'>
               <a href='https:/x.com/rajth0mbare' target='_blank'>
                 <XIcon />
               </a>
@@ -27,11 +32,6 @@ const Footer = () => {
             <li className='text-white/60 hover:text-white'>
               <a href='https:/instagram.com/rajth0mbare' target='_blank'>
                 <InstaIcon />
-              </a>
-            </li>
-            <li className='text-white/60 hover:text-white'>
-              <a href='#' target='_blank'>
-                <YoutubeIcon />
               </a>
             </li>
           </ul>
