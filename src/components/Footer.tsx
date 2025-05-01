@@ -20,7 +20,7 @@ const Footer = () => {
           </div>
           <ul className='flex justify-center gap-2.5'>
             <li className='text-white/60 hover:text-white'>
-              <a href='https:/github.com/raj-thombare' target='_blank'>
+              <a href='https:/github.com/raj-thombare/task-ai' target='_blank'>
                 <GithubIcon />
               </a>
             </li>
